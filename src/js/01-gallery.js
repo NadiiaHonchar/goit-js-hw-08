@@ -1,6 +1,4 @@
-import SimpleLightbox from "simplelightbox";
-// import '../../node_modules/simplelightbox/src/simple-lightbox';
-// import '../../node_modules/simplelightbox/src/simple-lightbox.scss'
+import SimpleLightbox from 'simplelightbox';
 
 // Add imports above this line
 import { galleryItems } from './gallery-items';
@@ -32,9 +30,7 @@ gallery.addEventListener('click', e =>
   e.preventDefault(); 
   if (e.target.nodeName !== 'IMG') { 
     return; 
-  }   
-  instance.element().querySelector('img').src = e.target.dataset.source;    
- show.simplelightbox; 
+  }    
 }); 
 
 var simplelightbox = new SimpleLightbox('.gallery a', 
@@ -44,5 +40,6 @@ heightRatio: 0.8,
 captionsData: 'alt',
 captionDelay: 250,
 });
+
 
 console.log(galleryItems);
